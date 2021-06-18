@@ -9,7 +9,7 @@ class ButtonCounter extends Component {
     }
   }
 
-  
+
  handleClick = () => {
      this.setState(previousState => {
        return {
