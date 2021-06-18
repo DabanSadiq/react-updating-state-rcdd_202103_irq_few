@@ -9,13 +9,14 @@ class ButtonCounter extends Component {
     }
   }
 
-  handleClick = () => {
-    // when handleClick is called, newCount is set to whatever this.state.count is plus 1 PRIOR to calling this.setState
-    let newCount = this.state.count + 1
-    this.setState({
-      count: newCount
-    })
-  }
+  
+ handleClick = () => {
+     this.setState(previousState => {
+       return {
+         count: previousState.count + 1
+       }
+     })
+   }
 
   render() {
     return (
